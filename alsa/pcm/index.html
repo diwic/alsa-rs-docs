@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `pcm` mod in crate `alsa`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, pcm">
+
+    <title>alsa::pcm - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>alsa</a></p><script>window.sidebarCurrent = {name: 'pcm', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>alsa</a>::<wbr><a class='mod' href=''>pcm</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-2881' class='srclink' href='../../src/alsa/pcm.rs.html#1-329' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Audio playback and capture</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.HwParams.html'
+                               title='alsa::pcm::HwParams'>HwParams</a></td>
+                        <td class='docblock short'>
+                             <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___p_c_m___h_w___params.html">snd_pcm_hw_params_t</a> wrapper</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.IO.html'
+                               title='alsa::pcm::IO'>IO</a></td>
+                        <td class='docblock short'>
+                             <p>Implements <code>std::io::Read</code> and <code>std::io::Write</code> for <code>PCM</code></p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.PCM.html'
+                               title='alsa::pcm::PCM'>PCM</a></td>
+                        <td class='docblock short'>
+                             <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___p_c_m.html">snd_pcm_t</a> wrapper - start here for audio playback and recording</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.SwParams.html'
+                               title='alsa::pcm::SwParams'>SwParams</a></td>
+                        <td class='docblock short'>
+                             <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___p_c_m___s_w___params.html">snd_pcm_sw_params_t</a> wrapper</p>
+
+                        </td>
+                    </tr>
+                </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='enum' href='enum.Access.html'
+                               title='alsa::pcm::Access'>Access</a></td>
+                        <td class='docblock short'>
+                             <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___p_c_m.html">SND_PCM_ACCESS_xxx</a> constants</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='enum' href='enum.Format.html'
+                               title='alsa::pcm::Format'>Format</a></td>
+                        <td class='docblock short'>
+                             <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___p_c_m.html">SND_PCM_FORMAT_xxx</a> constants</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='enum' href='enum.State.html'
+                               title='alsa::pcm::State'>State</a></td>
+                        <td class='docblock short'>
+                             <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___p_c_m.html">SND_PCM_STATE_xxx</a> constants</p>
+
+                        </td>
+                    </tr>
+                </table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='type' href='type.Frames.html'
+                               title='alsa::pcm::Frames'>Frames</a></td>
+                        <td class='docblock short'>
+                             <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___p_c_m.html">snd_pcm_sframes_t</a></p>
+
+                        </td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "alsa";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>

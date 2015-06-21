@@ -45,8 +45,22 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-8218' class='srclink' href='../../src/alsa/device_name.rs.html#1-70' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-13400' class='srclink' href='../../src/alsa/device_name.rs.html#1-84' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>Enumerate devices in the alsa library configuration</p>
+
+<h1 id="example" class='section-header'><a
+                           href="#example">Example</a></h1>
+<p>Print all devices found in various categories.</p>
+<pre id='rust-example-rendered' class='rust '>
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>ffi</span>::<span class='ident'>CString</span>;
+<span class='kw'>use</span> <span class='ident'>alsa</span>::<span class='ident'>device_name</span>::<span class='ident'>HintIter</span>;
+
+<span class='kw'>for</span> <span class='ident'>t</span> <span class='kw'>in</span> <span class='kw-2'>&amp;</span>[<span class='string'>&quot;pcm&quot;</span>, <span class='string'>&quot;ctl&quot;</span>, <span class='string'>&quot;rawmidi&quot;</span>, <span class='string'>&quot;timer&quot;</span>, <span class='string'>&quot;seq&quot;</span>, <span class='string'>&quot;hwdep&quot;</span>] {
+    <span class='macro'>println</span><span class='macro'>!</span>(<span class='string'>&quot;{} devices:&quot;</span>, <span class='ident'>t</span>);
+    <span class='kw'>let</span> <span class='ident'>i</span> <span class='op'>=</span> <span class='ident'>HintIter</span>::<span class='ident'>new</span>(<span class='prelude-val'>None</span>, <span class='kw-2'>&amp;</span><span class='op'>*</span><span class='ident'>CString</span>::<span class='ident'>new</span>(<span class='op'>*</span><span class='ident'>t</span>).<span class='ident'>unwrap</span>()).<span class='ident'>unwrap</span>();
+    <span class='kw'>for</span> <span class='ident'>a</span> <span class='kw'>in</span> <span class='ident'>i</span> { <span class='macro'>println</span><span class='macro'>!</span>(<span class='string'>&quot;  {:?}&quot;</span>, <span class='ident'>a</span>) }
+}
+</pre>
 </div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
 <table>
                     <tr class=' module-item'>

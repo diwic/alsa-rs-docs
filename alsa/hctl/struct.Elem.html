@@ -45,14 +45,12 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-2769' class='srclink' href='../../src/alsa/hctl.rs.html#46' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-5391' class='srclink' href='../../src/alsa/hctl.rs.html#72' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct Elem&lt;'a&gt;(_, _);</pre><div class='docblock'><p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___h_control.html">snd_hctl_elem_t</a> wrapper</p>
-</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl&lt;'a&gt; <a class='struct' href='../../alsa/hctl/struct.Elem.html' title='alsa::hctl::Elem'>Elem</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.get_name' class='method'><code>fn <a href='#method.get_name' class='fnname'>get_name</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;&amp;<a href='http://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;</code></h4>
-<h4 id='method.get_device' class='method'><code>fn <a href='#method.get_device' class='fnname'>get_device</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
-<h4 id='method.get_subdevice' class='method'><code>fn <a href='#method.get_subdevice' class='fnname'>get_subdevice</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
-<h4 id='method.get_numid' class='method'><code>fn <a href='#method.get_numid' class='fnname'>get_numid</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
-<h4 id='method.get_index' class='method'><code>fn <a href='#method.get_index' class='fnname'>get_index</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
-<h4 id='method.get_interface' class='method'><code>fn <a href='#method.get_interface' class='fnname'>get_interface</a>(&amp;self) -&gt; <a class='enum' href='../../alsa/ctl/enum.ElemIface.html' title='alsa::ctl::ElemIface'>ElemIface</a></code></h4>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl&lt;'a&gt; <a class='struct' href='../../alsa/hctl/struct.Elem.html' title='alsa::hctl::Elem'>Elem</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.get_id' class='method'><code>fn <a href='#method.get_id' class='fnname'>get_id</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='../../alsa/ctl/struct.ElemId.html' title='alsa::ctl::ElemId'>ElemId</a>&gt;</code></h4>
+<h4 id='method.info' class='method'><code>fn <a href='#method.info' class='fnname'>info</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='../../alsa/ctl/struct.ElemInfo.html' title='alsa::ctl::ElemInfo'>ElemInfo</a>&gt;</code></h4>
+<h4 id='method.read' class='method'><code>fn <a href='#method.read' class='fnname'>read</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='../../alsa/ctl/struct.ElemValue.html' title='alsa::ctl::ElemValue'>ElemValue</a>&gt;</code></h4>
+<h4 id='method.write' class='method'><code>fn <a href='#method.write' class='fnname'>write</a>(&amp;self, v: &amp;<a class='struct' href='../../alsa/ctl/struct.ElemValue.html' title='alsa::ctl::ElemValue'>ElemValue</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
 </div></section>
     <section id='search' class="content hidden"></section>
 

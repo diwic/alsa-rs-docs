@@ -102,7 +102,20 @@
 <span id="60">60</span>
 <span id="61">61</span>
 <span id="62">62</span>
+<span id="63">63</span>
+<span id="64">64</span>
+<span id="65">65</span>
+<span id="66">66</span>
+<span id="67">67</span>
+<span id="68">68</span>
+<span id="69">69</span>
+<span id="70">70</span>
+<span id="71">71</span>
+<span id="72">72</span>
+<span id="73">73</span>
 </pre><pre class='rust '>
+<span class='attribute'>#<span class='op'>!</span>[<span class='ident'>macro_use</span>]</span>
+
 <span class='kw'>use</span> <span class='ident'>libc</span>::{<span class='ident'>c_void</span>, <span class='ident'>c_int</span>, <span class='ident'>c_char</span>, <span class='ident'>free</span>};
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>ptr</span>;
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>borrow</span>::<span class='ident'>Cow</span>;
@@ -111,6 +124,7 @@
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>ffi</span>::<span class='ident'>CStr</span>;
 
 <span class='kw'>const</span> <span class='ident'>INVALID_STRING</span>: <span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>1</span>;
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>INVALID_FORMAT</span>: <span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>2</span>;
 
 <span class='doccomment'>/// Most ALSA functions can return a negative error code.</span>
 <span class='doccomment'>/// If so, then that error code is wrapped into this `Error` struct.</span>
@@ -121,10 +135,12 @@
 
 <span class='kw'>pub</span> <span class='kw'>type</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> <span class='op'>=</span> ::<span class='ident'>std</span>::<span class='ident'>result</span>::<span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>T</span>, <span class='ident'>Error</span><span class='op'>&gt;</span>;
 
-<span class='attribute'>#[<span class='ident'>inline</span>]</span>
-<span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>check</span>(<span class='ident'>f</span>: <span class='kw-2'>&amp;</span><span class='lifetime'>&#39;static</span> <span class='ident'>str</span>, <span class='ident'>r</span>: <span class='ident'>c_int</span>) <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>c_int</span><span class='op'>&gt;</span> {
-    <span class='kw'>if</span> <span class='ident'>r</span> <span class='op'>&lt;</span> <span class='number'>0</span> { <span class='prelude-val'>Err</span>(<span class='ident'>Error</span>::<span class='ident'>new</span>(<span class='prelude-val'>Some</span>(<span class='ident'>f</span>.<span class='ident'>into</span>()), <span class='ident'>r</span>)) }
-    <span class='kw'>else</span> { <span class='prelude-val'>Ok</span>(<span class='ident'>r</span>) }
+<span class='macro'>macro_rules</span><span class='macro'>!</span> <span class='ident'>acheck</span> {
+    (<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>f</span>: <span class='ident'>ident</span> ( $(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>x</span>: <span class='ident'>expr</span>),<span class='op'>*</span> ) ) <span class='op'>=&gt;</span> {{
+        <span class='kw'>let</span> <span class='ident'>r</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='ident'>alsa</span>::<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>f</span>( $(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>x</span>),<span class='op'>*</span> ) };
+        <span class='kw'>if</span> <span class='ident'>r</span> <span class='op'>&lt;</span> <span class='number'>0</span> { <span class='prelude-val'>Err</span>(<span class='ident'>Error</span>::<span class='ident'>new</span>(<span class='prelude-val'>Some</span>(<span class='macro'>stringify</span><span class='macro'>!</span>(<span class='macro-nonterminal'>$</span><span class='macro-nonterminal'>f</span>).<span class='ident'>into</span>()), <span class='ident'>r</span> <span class='kw'>as</span> ::<span class='ident'>libc</span>::<span class='ident'>c_int</span>)) }
+        <span class='kw'>else</span> { <span class='prelude-val'>Ok</span>(<span class='ident'>r</span>) }
+    }}
 }
 
 <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>from_const</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span>(<span class='ident'>func</span>: <span class='kw-2'>&amp;</span><span class='lifetime'>&#39;static</span> <span class='ident'>str</span>, <span class='ident'>s</span>: <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>c_char</span>) <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='kw-2'>&amp;</span><span class='lifetime'>&#39;a</span> <span class='ident'>str</span><span class='op'>&gt;</span> {
@@ -165,6 +181,12 @@
     }
 }
 
+<span class='attribute'>#[<span class='ident'>test</span>]</span>
+<span class='kw'>fn</span> <span class='ident'>broken_pcm_name</span>() {
+    <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>ffi</span>::<span class='ident'>CString</span>;
+    <span class='kw'>let</span> <span class='ident'>e</span> <span class='op'>=</span> ::<span class='ident'>PCM</span>::<span class='ident'>open</span>(<span class='kw-2'>&amp;</span><span class='op'>*</span><span class='ident'>CString</span>::<span class='ident'>new</span>(<span class='string'>&quot;this_PCM_does_not_exist&quot;</span>).<span class='ident'>unwrap</span>(), ::<span class='ident'>Direction</span>::<span class='ident'>Playback</span>, <span class='boolval'>false</span>).<span class='ident'>err</span>().<span class='ident'>unwrap</span>();
+    <span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>e</span>.<span class='number'>0</span>, <span class='prelude-val'>Some</span>(<span class='string'>&quot;snd_pcm_open&quot;</span>.<span class='ident'>into</span>()));
+}
 </pre>
 </section>
     <section id='search' class="content hidden"></section>

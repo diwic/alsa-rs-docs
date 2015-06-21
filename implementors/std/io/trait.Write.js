@@ -1,5 +1,5 @@
 (function() {var implementors = {};
-implementors['alsa'] = ["impl&lt;'a&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/std/io/trait.Write.html' title='std::io::Write'>Write</a> for <a class='struct' href='alsa/pcm/struct.IO.html' title='alsa::pcm::IO'>IO</a>&lt;'a&gt;","impl&lt;'a&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/std/io/trait.Write.html' title='std::io::Write'>Write</a> for <a class='struct' href='alsa/rawmidi/struct.IO.html' title='alsa::rawmidi::IO'>IO</a>&lt;'a&gt;",];
+implementors['alsa'] = ["impl&lt;'a, S: <a class='trait' href='http://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a>&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/std/io/trait.Write.html' title='std::io::Write'>Write</a> for <a class='struct' href='alsa/pcm/struct.IO.html' title='alsa::pcm::IO'>IO</a>&lt;'a, S&gt;","impl&lt;'a&gt; <a class='trait' href='http://doc.rust-lang.org/nightly/std/io/trait.Write.html' title='std::io::Write'>Write</a> for <a class='struct' href='alsa/rawmidi/struct.IO.html' title='alsa::rawmidi::IO'>IO</a>&lt;'a&gt;",];
 
             if (window.register_implementors) {
                 window.register_implementors(implementors);

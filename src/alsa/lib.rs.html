@@ -79,6 +79,13 @@
 <span id="37">37</span>
 <span id="38">38</span>
 <span id="39">39</span>
+<span id="40">40</span>
+<span id="41">41</span>
+<span id="42">42</span>
+<span id="43">43</span>
+<span id="44">44</span>
+<span id="45">45</span>
+<span id="46">46</span>
 </pre><pre class='rust '>
 <span class='doccomment'>//! This ALSA API wrapper/binding is WIP - the ALSA API is huge, and new</span>
 <span class='doccomment'>//! functions and structs might be added as requested. Enjoy!</span>
@@ -94,7 +101,9 @@
     <span class='ident'>Capture</span>
 }
 <span class='kw'>impl</span> <span class='ident'>Direction</span> {
+    <span class='attribute'>#[<span class='ident'>inline</span>]</span>
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>input</span>() <span class='op'>-&gt;</span> <span class='ident'>Direction</span> { <span class='ident'>Direction</span>::<span class='ident'>Capture</span> }
+    <span class='attribute'>#[<span class='ident'>inline</span>]</span>
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>output</span>() <span class='op'>-&gt;</span> <span class='ident'>Direction</span> { <span class='ident'>Direction</span>::<span class='ident'>Playback</span> }
 }
 
@@ -105,7 +114,12 @@
 <span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>card</span>;
 <span class='kw'>pub</span> <span class='kw'>use</span> <span class='ident'>card</span>::<span class='ident'>Card</span> <span class='kw'>as</span> <span class='ident'>Card</span>;
 
-<span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>ctl</span>;
+<span class='kw'>mod</span> <span class='ident'>ctl_int</span>;
+<span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>ctl</span> {
+    <span class='doccomment'>//! Control device API</span>
+    <span class='kw'>pub</span> <span class='kw'>use</span> <span class='ident'>super</span>::<span class='ident'>ctl_int</span>::{<span class='ident'>Ctl</span>, <span class='ident'>CardInfo</span>, <span class='ident'>ElemIface</span>, <span class='ident'>ElemId</span>, <span class='ident'>ElemType</span>, <span class='ident'>ElemValue</span>, <span class='ident'>ElemInfo</span>};
+}
+
 <span class='kw'>pub</span> <span class='kw'>use</span> <span class='ident'>ctl</span>::<span class='ident'>Ctl</span> <span class='kw'>as</span> <span class='ident'>Ctl</span>;
 
 <span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>hctl</span>;

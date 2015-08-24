@@ -34,7 +34,7 @@
             <div class="search-container">
                 <input class="search-input" name="search"
                        autocomplete="off"
-                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
                        type="search">
             </div>
         </form>
@@ -45,11 +45,11 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-0' class='srclink' href='../src/alsa/lib.rs.html#1-45' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-0' class='srclink' href='../src/alsa/lib.rs.html#1-65' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>This ALSA API wrapper/binding is WIP - the ALSA API is huge, and new
 functions and structs might be added as requested. Enjoy!</p>
 </div><h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
-<table><tr><td><code>pub use card::<a class='struct' href='../alsa/card/struct.Card.html' title='alsa::card::Card'>Card</a>;</code></td></tr><tr><td><code>pub use ctl::<a class='struct' href='../alsa/ctl/struct.Ctl.html' title='alsa::ctl::Ctl'>Ctl</a>;</code></td></tr><tr><td><code>pub use hctl::<a class='struct' href='../alsa/hctl/struct.HCtl.html' title='alsa::hctl::HCtl'>HCtl</a>;</code></td></tr><tr><td><code>pub use pcm::<a class='struct' href='../alsa/pcm/struct.PCM.html' title='alsa::pcm::PCM'>PCM</a>;</code></td></tr><tr><td><code>pub use rawmidi::<a class='struct' href='../alsa/rawmidi/struct.Rawmidi.html' title='alsa::rawmidi::Rawmidi'>Rawmidi</a>;</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table><tr><td><code>pub use card::<a class='struct' href='../alsa/card/struct.Card.html' title='alsa::card::Card'>Card</a>;</code></td></tr><tr><td><code>pub use ctl::<a class='struct' href='../alsa/ctl/struct.Ctl.html' title='alsa::ctl::Ctl'>Ctl</a>;</code></td></tr><tr><td><code>pub use hctl::<a class='struct' href='../alsa/hctl/struct.HCtl.html' title='alsa::hctl::HCtl'>HCtl</a>;</code></td></tr><tr><td><code>pub use pcm::<a class='struct' href='../alsa/pcm/struct.PCM.html' title='alsa::pcm::PCM'>PCM</a>;</code></td></tr><tr><td><code>pub use rawmidi::<a class='struct' href='../alsa/rawmidi/struct.Rawmidi.html' title='alsa::rawmidi::Rawmidi'>Rawmidi</a>;</code></td></tr><tr><td><code>pub use poll::<a class='trait' href='../alsa/poll/trait.PollDescriptors.html' title='alsa::poll::PollDescriptors'>PollDescriptors</a>;</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
 <table>
                     <tr class=' module-item'>
                         <td><a class='mod' href='card/index.html'
@@ -97,6 +97,15 @@ functions and structs might be added as requested. Enjoy!</p>
                     </tr>
                 
                     <tr class=' module-item'>
+                        <td><a class='mod' href='poll/index.html'
+                               title='alsa::poll'>poll</a></td>
+                        <td class='docblock short'>
+                             <p>Tiny poll ffi</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
                         <td><a class='mod' href='rawmidi/index.html'
                                title='alsa::rawmidi'>rawmidi</a></td>
                         <td class='docblock short'>
@@ -117,6 +126,15 @@ cannot be translated into Rust&#39;s UTF-8 strings.</p>
 
                         </td>
                     </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.Output.html'
+                               title='alsa::Output'>Output</a></td>
+                        <td class='docblock short'>
+                             <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___output.html">snd_output_t</a> wrapper</p>
+
+                        </td>
+                    </tr>
                 </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
 <table>
                     <tr class=' module-item'>
@@ -125,6 +143,17 @@ cannot be translated into Rust&#39;s UTF-8 strings.</p>
                         <td class='docblock short'>
                              <p>Replaces constants ending with PLAYBACK/CAPTURE as well as
 INPUT/OUTPUT </p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='enum' href='enum.ValueOr.html'
+                               title='alsa::ValueOr'>ValueOr</a></td>
+                        <td class='docblock short'>
+                             <p>Used to restrict hw parameters. In case the submitted
+value is unavailable, in which direction should one search
+for available values?</p>
 
                         </td>
                     </tr>
@@ -143,37 +172,44 @@ INPUT/OUTPUT </p>
     <section class="footer"></section>
 
     <div id="help" class="hidden">
-        <div class="shortcuts">
-            <h1>Keyboard shortcuts</h1>
-            <dl>
-                <dt>?</dt>
-                <dd>Show this help dialog</dd>
-                <dt>S</dt>
-                <dd>Focus the search field</dd>
-                <dt>&larrb;</dt>
-                <dd>Move up in search results</dd>
-                <dt>&rarrb;</dt>
-                <dd>Move down in search results</dd>
-                <dt>&#9166;</dt>
-                <dd>Go to active search result</dd>
-            </dl>
-        </div>
-        <div class="infos">
-            <h1>Search tricks</h1>
-            <p>
-                Prefix searches with a type followed by a colon (e.g.
-                <code>fn:</code>) to restrict the search to a given type.
-            </p>
-            <p>
-                Accepted types are: <code>fn</code>, <code>mod</code>,
-                <code>struct</code>, <code>enum</code>,
-                <code>trait</code>, <code>typedef</code> (or
-                <code>tdef</code>).
-            </p>
-            <p>
-                Search functions by type signature (e.g.
-                <code>vec -> usize</code>)
-            </p>
+        <div>
+            <div class="shortcuts">
+                <h1>Keyboard Shortcuts</h1>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h1>Search Tricks</h1>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
         </div>
     </div>
 

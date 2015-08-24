@@ -34,7 +34,7 @@
             <div class="search-container">
                 <input class="search-input" name="search"
                        autocomplete="off"
-                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
                        type="search">
             </div>
         </form>
@@ -205,12 +205,33 @@
 <span id="163">163</span>
 <span id="164">164</span>
 <span id="165">165</span>
+<span id="166">166</span>
+<span id="167">167</span>
+<span id="168">168</span>
+<span id="169">169</span>
+<span id="170">170</span>
+<span id="171">171</span>
+<span id="172">172</span>
+<span id="173">173</span>
+<span id="174">174</span>
+<span id="175">175</span>
+<span id="176">176</span>
+<span id="177">177</span>
+<span id="178">178</span>
+<span id="179">179</span>
+<span id="180">180</span>
+<span id="181">181</span>
+<span id="182">182</span>
+<span id="183">183</span>
+<span id="184">184</span>
+<span id="185">185</span>
+<span id="186">186</span>
 </pre><pre class='rust '>
 <span class='doccomment'>//! MIDI devices I/O and enumeration</span>
 
-<span class='kw'>use</span> <span class='ident'>libc</span>::{<span class='ident'>c_int</span>, <span class='ident'>c_uint</span>, <span class='ident'>c_void</span>, <span class='ident'>size_t</span>};
+<span class='kw'>use</span> <span class='ident'>libc</span>::{<span class='ident'>c_int</span>, <span class='ident'>c_uint</span>, <span class='ident'>c_void</span>, <span class='ident'>size_t</span>, <span class='ident'>c_short</span>, <span class='ident'>c_ushort</span>};
 <span class='kw'>use</span> <span class='ident'>super</span>::<span class='ident'>ctl_int</span>::{<span class='ident'>ctl_ptr</span>, <span class='ident'>Ctl</span>};
-<span class='kw'>use</span> <span class='ident'>super</span>::{<span class='ident'>Direction</span>};
+<span class='kw'>use</span> <span class='ident'>super</span>::{<span class='ident'>Direction</span>, <span class='ident'>poll</span>};
 <span class='kw'>use</span> <span class='ident'>super</span>::<span class='ident'>error</span>::<span class='op'>*</span>;
 <span class='kw'>use</span> <span class='ident'>alsa</span>;
 <span class='kw'>use</span> <span class='ident'>std</span>::{<span class='ident'>ptr</span>, <span class='ident'>io</span>};
@@ -341,6 +362,27 @@
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>io</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span>(<span class='kw-2'>&amp;</span><span class='lifetime'>&#39;a</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>IO</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> { <span class='ident'>IO</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) }
 }
 
+<span class='kw'>extern</span> <span class='string'>&quot;C&quot;</span> {
+    <span class='kw'>fn</span> <span class='ident'>snd_rawmidi_poll_descriptors</span>(<span class='ident'>rawmidi</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>alsa</span>::<span class='ident'>snd_rawmidi_t</span>, <span class='ident'>pfds</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>poll</span>::<span class='ident'>PollFd</span>, <span class='ident'>space</span>: <span class='ident'>c_uint</span>) <span class='op'>-&gt;</span> <span class='ident'>c_int</span>;
+    <span class='kw'>fn</span> <span class='ident'>snd_rawmidi_poll_descriptors_revents</span>(<span class='ident'>rawmidi</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>alsa</span>::<span class='ident'>snd_rawmidi_t</span>, <span class='ident'>pfds</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>poll</span>::<span class='ident'>PollFd</span>,
+        <span class='ident'>nfds</span>: <span class='ident'>c_uint</span>, <span class='ident'>revents</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>c_ushort</span>) <span class='op'>-&gt;</span> <span class='ident'>c_int</span>;
+}
+
+<span class='kw'>impl</span> <span class='ident'>poll</span>::<span class='ident'>PollDescriptors</span> <span class='kw'>for</span> <span class='ident'>Rawmidi</span> {
+    <span class='kw'>fn</span> <span class='ident'>count</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>usize</span> {
+        <span class='kw'>unsafe</span> { <span class='ident'>alsa</span>::<span class='ident'>snd_rawmidi_poll_descriptors_count</span>(<span class='self'>self</span>.<span class='number'>0</span>) <span class='kw'>as</span> <span class='ident'>usize</span> }
+    }
+    <span class='kw'>fn</span> <span class='ident'>fill</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>, <span class='ident'>p</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> [<span class='ident'>poll</span>::<span class='ident'>PollFd</span>]) <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>usize</span><span class='op'>&gt;</span> {
+        <span class='kw'>let</span> <span class='ident'>z</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='ident'>snd_rawmidi_poll_descriptors</span>(<span class='self'>self</span>.<span class='number'>0</span>, <span class='ident'>p</span>.<span class='ident'>as_mut_ptr</span>(), <span class='ident'>p</span>.<span class='ident'>len</span>() <span class='kw'>as</span> <span class='ident'>c_uint</span>) };
+        <span class='ident'>from_code</span>(<span class='string'>&quot;snd_rawmidi_poll_descriptors&quot;</span>, <span class='ident'>z</span>).<span class='ident'>map</span>(<span class='op'>|</span>_<span class='op'>|</span> <span class='ident'>z</span> <span class='kw'>as</span> <span class='ident'>usize</span>)
+    }
+    <span class='kw'>fn</span> <span class='ident'>revents</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>, <span class='ident'>p</span>: <span class='kw-2'>&amp;</span>[<span class='ident'>poll</span>::<span class='ident'>PollFd</span>]) <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>poll</span>::<span class='ident'>PollFlags</span><span class='op'>&gt;</span> {
+        <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>r</span> <span class='op'>=</span> <span class='number'>0</span>;
+        <span class='kw'>let</span> <span class='ident'>z</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='ident'>snd_rawmidi_poll_descriptors_revents</span>(<span class='self'>self</span>.<span class='number'>0</span>, <span class='ident'>p</span>.<span class='ident'>as_ptr</span>() <span class='kw'>as</span> <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>poll</span>::<span class='ident'>PollFd</span>, <span class='ident'>p</span>.<span class='ident'>len</span>() <span class='kw'>as</span> <span class='ident'>c_uint</span>, <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>r</span>) };
+        <span class='ident'>from_code</span>(<span class='string'>&quot;snd_rawmidi_poll_descriptors_revents&quot;</span>, <span class='ident'>z</span>).<span class='ident'>map</span>(<span class='op'>|</span>_<span class='op'>|</span> <span class='ident'>poll</span>::<span class='ident'>PollFlags</span>::<span class='ident'>from_bits_truncate</span>(<span class='ident'>r</span> <span class='kw'>as</span> <span class='ident'>c_short</span>))
+    }
+}
+
 <span class='doccomment'>/// Implements `std::io::Read` and `std::io::Write` for `Rawmidi`</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>IO</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span>(<span class='kw-2'>&amp;</span><span class='lifetime'>&#39;a</span> <span class='ident'>Rawmidi</span>);
 
@@ -378,37 +420,44 @@
     <section class="footer"></section>
 
     <div id="help" class="hidden">
-        <div class="shortcuts">
-            <h1>Keyboard shortcuts</h1>
-            <dl>
-                <dt>?</dt>
-                <dd>Show this help dialog</dd>
-                <dt>S</dt>
-                <dd>Focus the search field</dd>
-                <dt>&larrb;</dt>
-                <dd>Move up in search results</dd>
-                <dt>&rarrb;</dt>
-                <dd>Move down in search results</dd>
-                <dt>&#9166;</dt>
-                <dd>Go to active search result</dd>
-            </dl>
-        </div>
-        <div class="infos">
-            <h1>Search tricks</h1>
-            <p>
-                Prefix searches with a type followed by a colon (e.g.
-                <code>fn:</code>) to restrict the search to a given type.
-            </p>
-            <p>
-                Accepted types are: <code>fn</code>, <code>mod</code>,
-                <code>struct</code>, <code>enum</code>,
-                <code>trait</code>, <code>typedef</code> (or
-                <code>tdef</code>).
-            </p>
-            <p>
-                Search functions by type signature (e.g.
-                <code>vec -> usize</code>)
-            </p>
+        <div>
+            <div class="shortcuts">
+                <h1>Keyboard Shortcuts</h1>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h1>Search Tricks</h1>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
         </div>
     </div>
 

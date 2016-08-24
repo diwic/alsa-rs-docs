@@ -9,7 +9,9 @@
 
     <title>alsa::pcm::Status - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -24,10 +26,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'><a href='../index.html'>alsa</a>::<wbr><a href='index.html'>pcm</a></p><script>window.sidebarCurrent = {name: 'Status', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -42,29 +44,32 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>alsa</a>::<wbr><a href='index.html'>pcm</a>::<wbr><a class='struct' href=''>Status</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-15410' class='srclink' href='../../src/alsa/pcm.rs.html#544' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1607' class='srclink' href='../../src/alsa/src/pcm.rs.html#648' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct Status(_);</pre><div class='docblock'><p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___p_c_m___status.html">snd_pcm_status_t</a> wrapper</p>
-</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../alsa/pcm/struct.Status.html' title='alsa::pcm::Status'>Status</a></code></h3><div class='impl-items'><h4 id='method.get_htstamp' class='method'><code>fn <a href='#method.get_htstamp' class='fnname'>get_htstamp</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/nightly/libc/types/os/common/posix01/struct.timespec.html' title='libc::types::os::common::posix01::timespec'>timespec</a></code></h4>
-<h4 id='method.get_trigger_htstamp' class='method'><code>fn <a href='#method.get_trigger_htstamp' class='fnname'>get_trigger_htstamp</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/nightly/libc/types/os/common/posix01/struct.timespec.html' title='libc::types::os::common::posix01::timespec'>timespec</a></code></h4>
-<h4 id='method.get_audio_htstamp' class='method'><code>fn <a href='#method.get_audio_htstamp' class='fnname'>get_audio_htstamp</a>(&amp;self) -&gt; <a class='struct' href='http://doc.rust-lang.org/nightly/libc/types/os/common/posix01/struct.timespec.html' title='libc::types::os::common::posix01::timespec'>timespec</a></code></h4>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../alsa/pcm/struct.Status.html' title='alsa::pcm::Status'>Status</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1611' class='srclink' href='../../src/alsa/src/pcm.rs.html#650-687' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.get_htstamp' class='method'><code>fn <a href='#method.get_htstamp' class='fnname'>get_htstamp</a>(&amp;self) -&gt; timespec</code></h4>
+<h4 id='method.get_trigger_htstamp' class='method'><code>fn <a href='#method.get_trigger_htstamp' class='fnname'>get_trigger_htstamp</a>(&amp;self) -&gt; timespec</code></h4>
+<h4 id='method.get_audio_htstamp' class='method'><code>fn <a href='#method.get_audio_htstamp' class='fnname'>get_audio_htstamp</a>(&amp;self) -&gt; timespec</code></h4>
 <h4 id='method.get_state' class='method'><code>fn <a href='#method.get_state' class='fnname'>get_state</a>(&amp;self) -&gt; <a class='enum' href='../../alsa/pcm/enum.State.html' title='alsa::pcm::State'>State</a></code></h4>
 <h4 id='method.get_avail' class='method'><code>fn <a href='#method.get_avail' class='fnname'>get_avail</a>(&amp;self) -&gt; <a class='type' href='../../alsa/pcm/type.Frames.html' title='alsa::pcm::Frames'>Frames</a></code></h4>
 <h4 id='method.get_delay' class='method'><code>fn <a href='#method.get_delay' class='fnname'>get_delay</a>(&amp;self) -&gt; <a class='type' href='../../alsa/pcm/type.Frames.html' title='alsa::pcm::Frames'>Frames</a></code></h4>
 <h4 id='method.get_avail_max' class='method'><code>fn <a href='#method.get_avail_max' class='fnname'>get_avail_max</a>(&amp;self) -&gt; <a class='type' href='../../alsa/pcm/type.Frames.html' title='alsa::pcm::Frames'>Frames</a></code></h4>
 <h4 id='method.get_overrange' class='method'><code>fn <a href='#method.get_overrange' class='fnname'>get_overrange</a>(&amp;self) -&gt; <a class='type' href='../../alsa/pcm/type.Frames.html' title='alsa::pcm::Frames'>Frames</a></code></h4>
-<h4 id='method.dump' class='method'><code>fn <a href='#method.dump' class='fnname'>dump</a>(&amp;self, o: &amp;mut <a class='struct' href='../../alsa/struct.Output.html' title='alsa::Output'>Output</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<h4 id='method.dump' class='method'><code>fn <a href='#method.dump' class='fnname'>dump</a>(&amp;self, o: &amp;mut <a class='struct' href='../../alsa/struct.Output.html' title='alsa::Output'>Output</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
 </div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -77,11 +82,13 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -97,11 +104,11 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -113,6 +120,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

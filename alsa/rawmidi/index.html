@@ -9,7 +9,9 @@
 
     <title>alsa::rawmidi - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -24,10 +26,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'><a href='../index.html'>alsa</a></p><script>window.sidebarCurrent = {name: 'rawmidi', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -42,57 +44,51 @@
 
     <section id='main' class="content mod">
 <h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>alsa</a>::<wbr><a class='mod' href=''>rawmidi</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-15676' class='srclink' href='../../src/alsa/rawmidi.rs.html#1-186' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1642' class='srclink' href='../../src/alsa/src/rawmidi.rs.html#1-180' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>MIDI devices I/O and enumeration</p>
 </div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.IO.html'
-                               title='alsa::rawmidi::IO'>IO</a></td>
-                        <td class='docblock short'>
-                             <p>Implements <code>std::io::Read</code> and <code>std::io::Write</code> for <code>Rawmidi</code></p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.Info.html'
-                               title='alsa::rawmidi::Info'>Info</a></td>
-                        <td class='docblock short'>
-                             <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___raw_midi.html">snd_rawmidi_info_t</a> wrapper</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.Iter.html'
-                               title='alsa::rawmidi::Iter'>Iter</a></td>
-                        <td class='docblock short'>
-                             <p>Iterator over <a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___raw_midi.html">Rawmidi</a> devices and subdevices</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.Rawmidi.html'
-                               title='alsa::rawmidi::Rawmidi'>Rawmidi</a></td>
-                        <td class='docblock short'>
-                             <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___raw_midi.html">snd_rawmidi_t</a> wrapper</p>
-
-                        </td>
-                    </tr>
-                </table></section>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.IO.html'
+                                  title='alsa::rawmidi::IO'>IO</a></td>
+                           <td class='docblock short'>
+                                <p>Implements <code>std::io::Read</code> and <code>std::io::Write</code> for <code>Rawmidi</code></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Info.html'
+                                  title='alsa::rawmidi::Info'>Info</a></td>
+                           <td class='docblock short'>
+                                <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___raw_midi.html">snd_rawmidi_info_t</a> wrapper</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Iter.html'
+                                  title='alsa::rawmidi::Iter'>Iter</a></td>
+                           <td class='docblock short'>
+                                <p>Iterator over <a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___raw_midi.html">Rawmidi</a> devices and subdevices</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Rawmidi.html'
+                                  title='alsa::rawmidi::Rawmidi'>Rawmidi</a></td>
+                           <td class='docblock short'>
+                                <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___raw_midi.html">snd_rawmidi_t</a> wrapper</p>
+                           </td>
+                       </tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -105,11 +101,13 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -125,11 +123,11 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -141,6 +139,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

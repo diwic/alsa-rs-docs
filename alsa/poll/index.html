@@ -9,7 +9,9 @@
 
     <title>alsa::poll - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -24,10 +26,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'><a href='../index.html'>alsa</a></p><script>window.sidebarCurrent = {name: 'poll', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -42,118 +44,98 @@
 
     <section id='main' class="content mod">
 <h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>alsa</a>::<wbr><a class='mod' href=''>poll</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-17249' class='srclink' href='../../src/alsa/poll.rs.html#1-93' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1847' class='srclink' href='../../src/alsa/src/poll.rs.html#1-68' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>Tiny poll ffi</p>
 
-<p>This should probably have been part of the libc crate instead,
-but since it isn&#39;t, here&#39;s what you need to use the poll system call
-with ALSA.</p>
+<p>A tiny wrapper around libc&#39;s poll system call.</p>
 </div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.PollFd.html'
-                               title='alsa::poll::PollFd'>PollFd</a></td>
-                        <td class='docblock short'>
-                             
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.PollFlags.html'
-                               title='alsa::poll::PollFlags'>PollFlags</a></td>
-                        <td class='docblock short'>
-                             
-                        </td>
-                    </tr>
-                </table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PollFlags.html'
+                                  title='alsa::poll::PollFlags'>PollFlags</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='constant' href='constant.POLLERR.html'
-                               title='alsa::poll::POLLERR'>POLLERR</a></td>
-                        <td class='docblock short'>
-                             
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='constant' href='constant.POLLHUP.html'
-                               title='alsa::poll::POLLHUP'>POLLHUP</a></td>
-                        <td class='docblock short'>
-                             
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='constant' href='constant.POLLIN.html'
-                               title='alsa::poll::POLLIN'>POLLIN</a></td>
-                        <td class='docblock short'>
-                             
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='constant' href='constant.POLLNVAL.html'
-                               title='alsa::poll::POLLNVAL'>POLLNVAL</a></td>
-                        <td class='docblock short'>
-                             
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='constant' href='constant.POLLOUT.html'
-                               title='alsa::poll::POLLOUT'>POLLOUT</a></td>
-                        <td class='docblock short'>
-                             
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='constant' href='constant.POLLPRI.html'
-                               title='alsa::poll::POLLPRI'>POLLPRI</a></td>
-                        <td class='docblock short'>
-                             
-                        </td>
-                    </tr>
-                </table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.POLLERR.html'
+                                  title='alsa::poll::POLLERR'>POLLERR</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.POLLHUP.html'
+                                  title='alsa::poll::POLLHUP'>POLLHUP</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.POLLIN.html'
+                                  title='alsa::poll::POLLIN'>POLLIN</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.POLLNVAL.html'
+                                  title='alsa::poll::POLLNVAL'>POLLNVAL</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.POLLOUT.html'
+                                  title='alsa::poll::POLLOUT'>POLLOUT</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.POLLPRI.html'
+                                  title='alsa::poll::POLLPRI'>POLLPRI</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='trait' href='trait.PollDescriptors.html'
-                               title='alsa::poll::PollDescriptors'>PollDescriptors</a></td>
-                        <td class='docblock short'>
-                             
-                        </td>
-                    </tr>
-                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+                       <tr class=' module-item'>
+                           <td><a class='trait' href='trait.PollDescriptors.html'
+                                  title='alsa::poll::PollDescriptors'>PollDescriptors</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='fn' href='fn.poll.html'
-                               title='alsa::poll::poll'>poll</a></td>
-                        <td class='docblock short'>
-                             <p>Wrapper around the libc poll call.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='fn' href='fn.poll_all.html'
-                               title='alsa::poll::poll_all'>poll_all</a></td>
-                        <td class='docblock short'>
-                             <p>Builds a pollfd array, polls it, and returns the poll descriptors which have non-zero revents.</p>
-
-                        </td>
-                    </tr>
-                </table></section>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.poll.html'
+                                  title='alsa::poll::poll'>poll</a></td>
+                           <td class='docblock short'>
+                                <p>Wrapper around the libc poll call.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.poll_all.html'
+                                  title='alsa::poll::poll_all'>poll_all</a></td>
+                           <td class='docblock short'>
+                                <p>Builds a pollfd array, polls it, and returns the poll descriptors which have non-zero revents.</p>
+                           </td>
+                       </tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -166,11 +148,13 @@ with ALSA.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -186,11 +170,11 @@ with ALSA.</p>
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -202,6 +186,6 @@ with ALSA.</p>
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

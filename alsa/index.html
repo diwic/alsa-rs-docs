@@ -9,7 +9,9 @@
 
     <title>alsa - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../main.css">
+    
 
     
     
@@ -24,10 +26,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'></p><script>window.sidebarCurrent = {name: 'alsa', ty: 'mod', relpath: '../'};</script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -42,139 +44,139 @@
 
     <section id='main' class="content mod">
 <h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>alsa</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-0' class='srclink' href='../src/alsa/lib.rs.html#1-65' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/alsa/src/lib.rs.html#1-107' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>This ALSA API wrapper/binding is WIP - the ALSA API is huge, and new
 functions and structs might be added as requested. Enjoy!</p>
 </div><h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
-<table><tr><td><code>pub use card::<a class='struct' href='../alsa/card/struct.Card.html' title='alsa::card::Card'>Card</a>;</code></td></tr><tr><td><code>pub use ctl::<a class='struct' href='../alsa/ctl/struct.Ctl.html' title='alsa::ctl::Ctl'>Ctl</a>;</code></td></tr><tr><td><code>pub use hctl::<a class='struct' href='../alsa/hctl/struct.HCtl.html' title='alsa::hctl::HCtl'>HCtl</a>;</code></td></tr><tr><td><code>pub use pcm::<a class='struct' href='../alsa/pcm/struct.PCM.html' title='alsa::pcm::PCM'>PCM</a>;</code></td></tr><tr><td><code>pub use rawmidi::<a class='struct' href='../alsa/rawmidi/struct.Rawmidi.html' title='alsa::rawmidi::Rawmidi'>Rawmidi</a>;</code></td></tr><tr><td><code>pub use poll::<a class='trait' href='../alsa/poll/trait.PollDescriptors.html' title='alsa::poll::PollDescriptors'>PollDescriptors</a>;</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table><tr><td><code>pub use card::<a class='struct' href='../alsa/card/struct.Card.html' title='alsa::card::Card'>Card</a>;</code></td></tr><tr><td><code>pub use hctl::<a class='struct' href='../alsa/hctl/struct.HCtl.html' title='alsa::hctl::HCtl'>HCtl</a>;</code></td></tr><tr><td><code>pub use pcm::<a class='struct' href='../alsa/pcm/struct.PCM.html' title='alsa::pcm::PCM'>PCM</a>;</code></td></tr><tr><td><code>pub use rawmidi::<a class='struct' href='../alsa/rawmidi/struct.Rawmidi.html' title='alsa::rawmidi::Rawmidi'>Rawmidi</a>;</code></td></tr><tr><td><code>pub use poll::<a class='trait' href='../alsa/poll/trait.PollDescriptors.html' title='alsa::poll::PollDescriptors'>PollDescriptors</a>;</code></td></tr><tr><td><code>pub use mixer::<a class='struct' href='../alsa/mixer/struct.Mixer.html' title='alsa::mixer::Mixer'>Mixer</a>;</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='card/index.html'
-                               title='alsa::card'>card</a></td>
-                        <td class='docblock short'>
-                             <p>Sound card enumeration</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='ctl/index.html'
-                               title='alsa::ctl'>ctl</a></td>
-                        <td class='docblock short'>
-                             <p>Control device API</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='device_name/index.html'
-                               title='alsa::device_name'>device_name</a></td>
-                        <td class='docblock short'>
-                             <p>Enumerate devices in the alsa library configuration</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='hctl/index.html'
-                               title='alsa::hctl'>hctl</a></td>
-                        <td class='docblock short'>
-                             <p>HCtl API - for mixer control and jack detection</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='pcm/index.html'
-                               title='alsa::pcm'>pcm</a></td>
-                        <td class='docblock short'>
-                             <p>Audio playback and capture</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='poll/index.html'
-                               title='alsa::poll'>poll</a></td>
-                        <td class='docblock short'>
-                             <p>Tiny poll ffi</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='mod' href='rawmidi/index.html'
-                               title='alsa::rawmidi'>rawmidi</a></td>
-                        <td class='docblock short'>
-                             <p>MIDI devices I/O and enumeration</p>
-
-                        </td>
-                    </tr>
-                </table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='card/index.html'
+                                  title='alsa::card'>card</a></td>
+                           <td class='docblock short'>
+                                <p>Sound card enumeration</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='ctl/index.html'
+                                  title='alsa::ctl'>ctl</a></td>
+                           <td class='docblock short'>
+                                <p>Control device API</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='device_name/index.html'
+                                  title='alsa::device_name'>device_name</a></td>
+                           <td class='docblock short'>
+                                <p>Enumerate devices in the alsa library configuration</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='hctl/index.html'
+                                  title='alsa::hctl'>hctl</a></td>
+                           <td class='docblock short'>
+                                <p>HCtl API - for mixer control and jack detection</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='mixer/index.html'
+                                  title='alsa::mixer'>mixer</a></td>
+                           <td class='docblock short'>
+                                <p>Mixer API - Simple Mixer API for mixer control</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='pcm/index.html'
+                                  title='alsa::pcm'>pcm</a></td>
+                           <td class='docblock short'>
+                                <p>Audio playback and capture</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='poll/index.html'
+                                  title='alsa::poll'>poll</a></td>
+                           <td class='docblock short'>
+                                <p>Tiny poll ffi</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='rawmidi/index.html'
+                                  title='alsa::rawmidi'>rawmidi</a></td>
+                           <td class='docblock short'>
+                                <p>MIDI devices I/O and enumeration</p>
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.Error.html'
-                               title='alsa::Error'>Error</a></td>
-                        <td class='docblock short'>
-                             <p>Most ALSA functions can return a negative error code.
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Ctl.html'
+                                  title='alsa::Ctl'>Ctl</a></td>
+                           <td class='docblock short'>
+                                <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___control.html">snd_ctl_t</a> wrapper</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Error.html'
+                                  title='alsa::Error'>Error</a></td>
+                           <td class='docblock short'>
+                                <p>Most ALSA functions can return a negative error code.
 If so, then that error code is wrapped into this <code>Error</code> struct.
 An Error is also returned in case ALSA returns a string that
 cannot be translated into Rust&#39;s UTF-8 strings.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.Output.html'
-                               title='alsa::Output'>Output</a></td>
-                        <td class='docblock short'>
-                             <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___output.html">snd_output_t</a> wrapper</p>
-
-                        </td>
-                    </tr>
-                </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Output.html'
+                                  title='alsa::Output'>Output</a></td>
+                           <td class='docblock short'>
+                                <p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___output.html">snd_output_t</a> wrapper</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='enum' href='enum.Direction.html'
-                               title='alsa::Direction'>Direction</a></td>
-                        <td class='docblock short'>
-                             <p>Replaces constants ending with PLAYBACK/CAPTURE as well as
-INPUT/OUTPUT </p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='enum' href='enum.ValueOr.html'
-                               title='alsa::ValueOr'>ValueOr</a></td>
-                        <td class='docblock short'>
-                             <p>Used to restrict hw parameters. In case the submitted
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.Direction.html'
+                                  title='alsa::Direction'>Direction</a></td>
+                           <td class='docblock short'>
+                                <p>Replaces constants ending with PLAYBACK/CAPTURE as well as
+INPUT/OUTPUT</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.Round.html'
+                                  title='alsa::Round'>Round</a></td>
+                           <td class='docblock short'>
+                                <p>Rounding mode (used in some mixer related calls)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ValueOr.html'
+                                  title='alsa::ValueOr'>ValueOr</a></td>
+                           <td class='docblock short'>
+                                <p>Used to restrict hw parameters. In case the submitted
 value is unavailable, in which direction should one search
 for available values?</p>
-
-                        </td>
-                    </tr>
-                </table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='type' href='type.Result.html'
-                               title='alsa::Result'>Result</a></td>
-                        <td class='docblock short'>
-                             
-                        </td>
-                    </tr>
-                </table></section>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Result.html'
+                                  title='alsa::Result'>Result</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -187,11 +189,13 @@ for available values?</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -207,11 +211,11 @@ for available values?</p>
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -223,6 +227,6 @@ for available values?</p>
     <script src="../jquery.js"></script>
     <script src="../main.js"></script>
     
-    <script async src="../search-index.js"></script>
+    <script defer src="../search-index.js"></script>
 </body>
 </html>

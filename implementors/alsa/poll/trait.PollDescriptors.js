@@ -1,5 +1,5 @@
 (function() {var implementors = {};
-implementors['alsa'] = [];
+implementors["alsa"] = [];
 
             if (window.register_implementors) {
                 window.register_implementors(implementors);

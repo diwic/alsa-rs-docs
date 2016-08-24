@@ -9,7 +9,9 @@
 
     <title>alsa::pcm::Format - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -24,10 +26,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'><a href='../index.html'>alsa</a>::<wbr><a href='index.html'>pcm</a></p><script>window.sidebarCurrent = {name: 'Format', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -42,10 +44,10 @@
 
     <section id='main' class="content enum">
 <h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>alsa</a>::<wbr><a href='index.html'>pcm</a>::<wbr><a class='enum' href=''>Format</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-10592' class='srclink' href='../../src/alsa/pcm.rs.html#291-308' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1199' class='srclink' href='../../src/alsa/src/lib.rs.html#14-18' title='goto source code'>[src]</a></span></h1>
 <pre class='rust enum'>pub enum Format {
     Unknown,
     S8,
@@ -54,6 +56,10 @@
     S16BE,
     U16LE,
     U16BE,
+    S24LE,
+    S24BE,
+    U24LE,
+    U24BE,
     S32LE,
     S32BE,
     U32LE,
@@ -62,34 +68,92 @@
     FloatBE,
     Float64LE,
     Float64BE,
+    IEC958SubframeLE,
+    IEC958SubframeBE,
+    MuLaw,
+    ALaw,
+    ImaAdPCM,
+    MPEG,
+    GSM,
+    Special,
+    S243LE,
+    S243BE,
+    U243LE,
+    U243BE,
+    S203LE,
+    S203BE,
+    U203LE,
+    U203BE,
+    S183LE,
+    S183BE,
+    U183LE,
+    U183BE,
+    G72324,
+    G723241B,
+    G72340,
+    G723401B,
+    DSDU8,
+    DSDU16LE,
 }</pre><div class='docblock'><p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___p_c_m.html">SND_PCM_FORMAT_xxx</a> constants</p>
 </div><h2 class='variants'>Variants</h2>
-<table><tr><td id='variant.Unknown'><code>Unknown</code></td><td></td></tr><tr><td id='variant.S8'><code>S8</code></td><td></td></tr><tr><td id='variant.U8'><code>U8</code></td><td></td></tr><tr><td id='variant.S16LE'><code>S16LE</code></td><td></td></tr><tr><td id='variant.S16BE'><code>S16BE</code></td><td></td></tr><tr><td id='variant.U16LE'><code>U16LE</code></td><td></td></tr><tr><td id='variant.U16BE'><code>U16BE</code></td><td></td></tr><tr><td id='variant.S32LE'><code>S32LE</code></td><td></td></tr><tr><td id='variant.S32BE'><code>S32BE</code></td><td></td></tr><tr><td id='variant.U32LE'><code>U32LE</code></td><td></td></tr><tr><td id='variant.U32BE'><code>U32BE</code></td><td></td></tr><tr><td id='variant.FloatLE'><code>FloatLE</code></td><td></td></tr><tr><td id='variant.FloatBE'><code>FloatBE</code></td><td></td></tr><tr><td id='variant.Float64LE'><code>Float64LE</code></td><td></td></tr><tr><td id='variant.Float64BE'><code>Float64BE</code></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h3><div class='impl-items'><h4 id='method.s16' class='method'><code>fn <a href='#method.s16' class='fnname'>s16</a>() -&gt; <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h4>
+<span id='variant.Unknown' class='variant'><code>Unknown</code></span><span id='variant.S8' class='variant'><code>S8</code></span><span id='variant.U8' class='variant'><code>U8</code></span><span id='variant.S16LE' class='variant'><code>S16LE</code></span><span id='variant.S16BE' class='variant'><code>S16BE</code></span><span id='variant.U16LE' class='variant'><code>U16LE</code></span><span id='variant.U16BE' class='variant'><code>U16BE</code></span><span id='variant.S24LE' class='variant'><code>S24LE</code></span><span id='variant.S24BE' class='variant'><code>S24BE</code></span><span id='variant.U24LE' class='variant'><code>U24LE</code></span><span id='variant.U24BE' class='variant'><code>U24BE</code></span><span id='variant.S32LE' class='variant'><code>S32LE</code></span><span id='variant.S32BE' class='variant'><code>S32BE</code></span><span id='variant.U32LE' class='variant'><code>U32LE</code></span><span id='variant.U32BE' class='variant'><code>U32BE</code></span><span id='variant.FloatLE' class='variant'><code>FloatLE</code></span><span id='variant.FloatBE' class='variant'><code>FloatBE</code></span><span id='variant.Float64LE' class='variant'><code>Float64LE</code></span><span id='variant.Float64BE' class='variant'><code>Float64BE</code></span><span id='variant.IEC958SubframeLE' class='variant'><code>IEC958SubframeLE</code></span><span id='variant.IEC958SubframeBE' class='variant'><code>IEC958SubframeBE</code></span><span id='variant.MuLaw' class='variant'><code>MuLaw</code></span><span id='variant.ALaw' class='variant'><code>ALaw</code></span><span id='variant.ImaAdPCM' class='variant'><code>ImaAdPCM</code></span><span id='variant.MPEG' class='variant'><code>MPEG</code></span><span id='variant.GSM' class='variant'><code>GSM</code></span><span id='variant.Special' class='variant'><code>Special</code></span><span id='variant.S243LE' class='variant'><code>S243LE</code></span><span id='variant.S243BE' class='variant'><code>S243BE</code></span><span id='variant.U243LE' class='variant'><code>U243LE</code></span><span id='variant.U243BE' class='variant'><code>U243BE</code></span><span id='variant.S203LE' class='variant'><code>S203LE</code></span><span id='variant.S203BE' class='variant'><code>S203BE</code></span><span id='variant.U203LE' class='variant'><code>U203LE</code></span><span id='variant.U203BE' class='variant'><code>U203BE</code></span><span id='variant.S183LE' class='variant'><code>S183LE</code></span><span id='variant.S183BE' class='variant'><code>S183BE</code></span><span id='variant.U183LE' class='variant'><code>U183LE</code></span><span id='variant.U183BE' class='variant'><code>U183BE</code></span><span id='variant.G72324' class='variant'><code>G72324</code></span><span id='variant.G723241B' class='variant'><code>G723241B</code></span><span id='variant.G72340' class='variant'><code>G72340</code></span><span id='variant.G723401B' class='variant'><code>G723401B</code></span><span id='variant.DSDU8' class='variant'><code>DSDU8</code></span><span id='variant.DSDU16LE' class='variant'><code>DSDU16LE</code></span><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1292' class='srclink' href='../../src/alsa/src/lib.rs.html#23-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.all' class='method'><code>fn <a href='#method.all' class='fnname'>all</a>() -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;'static [</a><a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a></code></h4>
+<div class='docblock'><p>Returns a slice of all possible values; useful for iteration</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1302' class='srclink' href='../../src/alsa/src/pcm.rs.html#402-429' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.s16' class='method'><code>fn <a href='#method.s16' class='fnname'>s16</a>() -&gt; <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h4>
 <h4 id='method.u16' class='method'><code>fn <a href='#method.u16' class='fnname'>u16</a>() -&gt; <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h4>
+<h4 id='method.s24' class='method'><code>fn <a href='#method.s24' class='fnname'>s24</a>() -&gt; <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h4>
+<h4 id='method.u24' class='method'><code>fn <a href='#method.u24' class='fnname'>u24</a>() -&gt; <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h4>
 <h4 id='method.s32' class='method'><code>fn <a href='#method.s32' class='fnname'>s32</a>() -&gt; <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h4>
 <h4 id='method.u32' class='method'><code>fn <a href='#method.u32' class='fnname'>u32</a>() -&gt; <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h4>
 <h4 id='method.float' class='method'><code>fn <a href='#method.float' class='fnname'>float</a>() -&gt; <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h4>
 <h4 id='method.float64' class='method'><code>fn <a href='#method.float64' class='fnname'>float64</a>() -&gt; <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h4>
-</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html' title='core::cmp::Ord'>Ord</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h3><div class='impl-items'><h4 id='method.cmp' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html#method.cmp' class='fnname'>cmp</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/cmp/enum.Ordering.html' title='core::cmp::Ordering'>Ordering</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html' title='core::cmp::PartialOrd'>PartialOrd</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h3><div class='impl-items'><h4 id='method.partial_cmp' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.partial_cmp' class='fnname'>partial_cmp</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/cmp/enum.Ordering.html' title='core::cmp::Ordering'>Ordering</a>&gt;</code></h4>
-<h4 id='method.lt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.lt' class='fnname'>lt</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a>) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
-<h4 id='method.le' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.le' class='fnname'>le</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a>) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
-<h4 id='method.gt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.gt' class='fnname'>gt</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a>) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
-<h4 id='method.ge' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.ge' class='fnname'>ge</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a>) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h3><div class='impl-items'></div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a>) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
-<h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a>) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h4>
-<h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h3><div class='impl-items'></div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+<h4 id='method.iec958_subframe' class='method'><code>fn <a href='#method.iec958_subframe' class='fnname'>iec958_subframe</a>() -&gt; <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1120' class='srclink' href='../../src/alsa/src/lib.rs.html#12' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.hash' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#tymethod.hash' class='fnname'>hash</a>&lt;__H:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a>&gt;(&amp;self, __arg_0: &amp;mut __H)</code></h4>
+<div class='docblock'><p>Feeds this value into the state given, updating the hasher as necessary.</p>
+</div><h4 id='method.hash_slice' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[Self]</a>, state: &amp;mut H) <span class='where'>where H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a></span></code><div class='since' title='Stable since Rust version 1.3.0'>1.3.0</div></h4>
+<div class='docblock'><p>Feeds a slice of this type into the state provided.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html' title='core::cmp::Ord'>Ord</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1125' class='srclink' href='../../src/alsa/src/lib.rs.html#12' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.cmp' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html#tymethod.cmp' class='fnname'>cmp</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/cmp/enum.Ordering.html' title='core::cmp::Ordering'>Ordering</a></code></h4>
+<div class='docblock'><p>This method returns an <code>Ordering</code> between <code>self</code> and <code>other</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html#tymethod.cmp">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html' title='core::cmp::PartialOrd'>PartialOrd</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1131' class='srclink' href='../../src/alsa/src/lib.rs.html#12' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.partial_cmp' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#tymethod.partial_cmp' class='fnname'>partial_cmp</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/cmp/enum.Ordering.html' title='core::cmp::Ordering'>Ordering</a>&gt;</code></h4>
+<div class='docblock'><p>This method returns an ordering between <code>self</code> and <code>other</code> values if one exists. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#tymethod.partial_cmp">Read more</a></p>
+</div><h4 id='method.lt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.lt' class='fnname'>lt</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>This method tests less than (for <code>self</code> and <code>other</code>) and is used by the <code>&lt;</code> operator. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.lt">Read more</a></p>
+</div><h4 id='method.le' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.le' class='fnname'>le</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>This method tests less than or equal to (for <code>self</code> and <code>other</code>) and is used by the <code>&lt;=</code> operator. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.le">Read more</a></p>
+</div><h4 id='method.gt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.gt' class='fnname'>gt</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>This method tests greater than (for <code>self</code> and <code>other</code>) and is used by the <code>&gt;</code> operator. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.gt">Read more</a></p>
+</div><h4 id='method.ge' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.ge' class='fnname'>ge</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>This method tests greater than or equal to (for <code>self</code> and <code>other</code>) and is used by the <code>&gt;=</code> operator. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.ge">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1137' class='srclink' href='../../src/alsa/src/lib.rs.html#12' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1140' class='srclink' href='../../src/alsa/src/lib.rs.html#12' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1146' class='srclink' href='../../src/alsa/src/lib.rs.html#12' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1149' class='srclink' href='../../src/alsa/src/lib.rs.html#12' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1150' class='srclink' href='../../src/alsa/src/lib.rs.html#12' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -102,11 +166,13 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -122,11 +188,11 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -138,6 +204,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

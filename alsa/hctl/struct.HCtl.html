@@ -9,7 +9,9 @@
 
     <title>alsa::hctl::HCtl - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -24,10 +26,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'><a href='../index.html'>alsa</a>::<wbr><a href='index.html'>hctl</a></p><script>window.sidebarCurrent = {name: 'HCtl', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -42,30 +44,39 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>alsa</a>::<wbr><a href='index.html'>hctl</a>::<wbr><a class='struct' href=''>HCtl</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-6285' class='srclink' href='../../src/alsa/hctl.rs.html#37' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-635' class='srclink' href='../../src/alsa/src/hctl.rs.html#37' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct HCtl(_);</pre><div class='docblock'><p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___h_control.html">snd_hctl_t</a> wrapper</p>
-</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../alsa/hctl/struct.HCtl.html' title='alsa::hctl::HCtl'>HCtl</a></code></h3><div class='impl-items'><h4 id='method.open' class='method'><code>fn <a href='#method.open' class='fnname'>open</a>(c: &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/std/ffi/c_str/struct.CStr.html' title='std::ffi::c_str::CStr'>CStr</a>, nonblock: <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='../../alsa/hctl/struct.HCtl.html' title='alsa::hctl::HCtl'>HCtl</a>&gt;</code></h4>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../alsa/hctl/struct.HCtl.html' title='alsa::hctl::HCtl'>HCtl</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-641' class='srclink' href='../../src/alsa/src/hctl.rs.html#43-64' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.open' class='method'><code>fn <a href='#method.open' class='fnname'>open</a>(c: &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/std/ffi/c_str/struct.CStr.html' title='std::ffi::c_str::CStr'>CStr</a>, nonblock: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='../../alsa/hctl/struct.HCtl.html' title='alsa::hctl::HCtl'>HCtl</a>&gt;</code></h4>
 <div class='docblock'><p>Open does not support async mode (it&#39;s not very Rustic anyway)
 Note: You probably want to call <code>load</code> afterwards.</p>
-</div><h4 id='method.load' class='method'><code>fn <a href='#method.load' class='fnname'>load</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+</div><h4 id='method.load' class='method'><code>fn <a href='#method.load' class='fnname'>load</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
 <h4 id='method.elem_iter' class='method'><code>fn <a href='#method.elem_iter' class='fnname'>elem_iter</a>&lt;'a&gt;(&amp;'a self) -&gt; <a class='struct' href='../../alsa/hctl/struct.ElemIter.html' title='alsa::hctl::ElemIter'>ElemIter</a>&lt;'a&gt;</code></h4>
-</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../alsa/hctl/struct.HCtl.html' title='alsa::hctl::HCtl'>HCtl</a></code></h3><div class='impl-items'><h4 id='method.drop' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#method.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
-</div><h3 class='impl'><code>impl <a class='trait' href='../../alsa/poll/trait.PollDescriptors.html' title='alsa::poll::PollDescriptors'>PollDescriptors</a> for <a class='struct' href='../../alsa/hctl/struct.HCtl.html' title='alsa::hctl::HCtl'>HCtl</a></code></h3><div class='impl-items'><h4 id='method.count' class='method'><code>fn <a href='../../alsa/poll/trait.PollDescriptors.html#method.count' class='fnname'>count</a>(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></h4>
-<h4 id='method.fill' class='method'><code>fn <a href='../../alsa/poll/trait.PollDescriptors.html#method.fill' class='fnname'>fill</a>(&amp;self, p: <a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;mut [</a><a class='struct' href='../../alsa/poll/struct.PollFd.html' title='alsa::poll::PollFd'>PollFd</a><a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>&gt;</code></h4>
-<h4 id='method.revents' class='method'><code>fn <a href='../../alsa/poll/trait.PollDescriptors.html#method.revents' class='fnname'>revents</a>(&amp;self, p: <a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='struct' href='../../alsa/poll/struct.PollFd.html' title='alsa::poll::PollFd'>PollFd</a><a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='../../alsa/poll/struct.PollFlags.html' title='alsa::poll::PollFlags'>PollFlags</a>&gt;</code></h4>
-<h4 id='method.get' class='method'><code>fn <a href='../../alsa/poll/trait.PollDescriptors.html#method.get' class='fnname'>get</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../alsa/poll/struct.PollFd.html' title='alsa::poll::PollFd'>PollFd</a>&gt;&gt;</code></h4>
-</div></section>
+<h4 id='method.find_elem' class='method'><code>fn <a href='#method.find_elem' class='fnname'>find_elem</a>&lt;'a&gt;(&amp;'a self, id: &amp;<a class='struct' href='../../alsa/ctl/struct.ElemId.html' title='alsa::ctl::ElemId'>ElemId</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../alsa/hctl/struct.Elem.html' title='alsa::hctl::Elem'>Elem</a>&lt;'a&gt;&gt;</code></h4>
+<h4 id='method.wait' class='method'><code>fn <a href='#method.wait' class='fnname'>wait</a>(&amp;self, timeout_ms: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../alsa/hctl/struct.HCtl.html' title='alsa::hctl::HCtl'>HCtl</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-638' class='srclink' href='../../src/alsa/src/hctl.rs.html#39-41' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.drop' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>A method called when the value goes out of scope. <a href="https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../alsa/poll/trait.PollDescriptors.html' title='alsa::poll::PollDescriptors'>PollDescriptors</a> for <a class='struct' href='../../alsa/hctl/struct.HCtl.html' title='alsa::hctl::HCtl'>HCtl</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-669' class='srclink' href='../../src/alsa/src/hctl.rs.html#66-79' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.count' class='method'><code>fn <a href='../../alsa/poll/trait.PollDescriptors.html#tymethod.count' class='fnname'>count</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></h4>
+<h4 id='method.fill' class='method'><code>fn <a href='../../alsa/poll/trait.PollDescriptors.html#tymethod.fill' class='fnname'>fill</a>(&amp;self, p: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;mut [</a>pollfd<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>&gt;</code></h4>
+<h4 id='method.revents' class='method'><code>fn <a href='../../alsa/poll/trait.PollDescriptors.html#tymethod.revents' class='fnname'>revents</a>(&amp;self, p: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a>pollfd<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='../../alsa/poll/struct.PollFlags.html' title='alsa::poll::PollFlags'>PollFlags</a>&gt;</code></h4>
+<h4 id='method.get' class='method'><code>fn <a href='../../alsa/poll/trait.PollDescriptors.html#method.get' class='fnname'>get</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;pollfd&gt;&gt;</code></h4>
+<div class='docblock'><p>Wrapper around count and fill - returns an array of pollfds</p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -78,11 +89,13 @@ Note: You probably want to call <code>load</code> afterwards.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -98,11 +111,11 @@ Note: You probably want to call <code>load</code> afterwards.</p>
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -114,6 +127,6 @@ Note: You probably want to call <code>load</code> afterwards.</p>
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

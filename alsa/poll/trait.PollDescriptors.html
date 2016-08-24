@@ -9,7 +9,9 @@
 
     <title>alsa::poll::PollDescriptors - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -24,10 +26,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'><a href='../index.html'>alsa</a>::<wbr><a href='index.html'>poll</a></p><script>window.sidebarCurrent = {name: 'PollDescriptors', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -42,41 +44,45 @@
 
     <section id='main' class="content trait">
 <h1 class='fqn'><span class='in-band'>Trait <a href='../index.html'>alsa</a>::<wbr><a href='index.html'>poll</a>::<wbr><a class='trait' href=''>PollDescriptors</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-18629' class='srclink' href='../../src/alsa/poll.rs.html#42-53' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-2047' class='srclink' href='../../src/alsa/src/poll.rs.html#22-33' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait PollDescriptors {
-    fn <a href='#tymethod.count' class='fnname'>count</a>(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>;
-    fn <a href='#tymethod.fill' class='fnname'>fill</a>(&amp;self, <a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;mut [</a><a class='struct' href='../../alsa/poll/struct.PollFd.html' title='alsa::poll::PollFd'>PollFd</a><a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>&gt;;
-    fn <a href='#tymethod.revents' class='fnname'>revents</a>(&amp;self, <a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='struct' href='../../alsa/poll/struct.PollFd.html' title='alsa::poll::PollFd'>PollFd</a><a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='../../alsa/poll/struct.PollFlags.html' title='alsa::poll::PollFlags'>PollFlags</a>&gt;;
+    fn <a href='#tymethod.count' class='fnname'>count</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>;
+    fn <a href='#tymethod.fill' class='fnname'>fill</a>(&amp;self, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;mut [</a>pollfd<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>&gt;;
+    fn <a href='#tymethod.revents' class='fnname'>revents</a>(&amp;self, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a>pollfd<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='../../alsa/poll/struct.PollFlags.html' title='alsa::poll::PollFlags'>PollFlags</a>&gt;;
 
-    fn <a href='#method.get' class='fnname'>get</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../alsa/poll/struct.PollFd.html' title='alsa::poll::PollFd'>PollFd</a>&gt;&gt; { ... }
+    fn <a href='#method.get' class='fnname'>get</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;pollfd&gt;&gt; { ... }
 }</pre>
             <h2 id='required-methods'>Required Methods</h2>
             <div class='methods'>
-        <h3 id='tymethod.count' class='method stab '><code>fn <a href='#tymethod.count' class='fnname'>count</a>(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></h3><h3 id='tymethod.fill' class='method stab '><code>fn <a href='#tymethod.fill' class='fnname'>fill</a>(&amp;self, <a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;mut [</a><a class='struct' href='../../alsa/poll/struct.PollFd.html' title='alsa::poll::PollFd'>PollFd</a><a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>&gt;</code></h3><h3 id='tymethod.revents' class='method stab '><code>fn <a href='#tymethod.revents' class='fnname'>revents</a>(&amp;self, <a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='struct' href='../../alsa/poll/struct.PollFd.html' title='alsa::poll::PollFd'>PollFd</a><a href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='../../alsa/poll/struct.PollFlags.html' title='alsa::poll::PollFlags'>PollFlags</a>&gt;</code></h3></div>
+        <h3 id='tymethod.count' class='method stab '><code>fn <a href='#tymethod.count' class='fnname'>count</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></h3><h3 id='tymethod.fill' class='method stab '><code>fn <a href='#tymethod.fill' class='fnname'>fill</a>(&amp;self, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;mut [</a>pollfd<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>&gt;</code></h3><h3 id='tymethod.revents' class='method stab '><code>fn <a href='#tymethod.revents' class='fnname'>revents</a>(&amp;self, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a>pollfd<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='../../alsa/poll/struct.PollFlags.html' title='alsa::poll::PollFlags'>PollFlags</a>&gt;</code></h3></div>
             <h2 id='provided-methods'>Provided Methods</h2>
             <div class='methods'>
-        <h3 id='method.get' class='method stab '><code>fn <a href='#method.get' class='fnname'>get</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../alsa/poll/struct.PollFd.html' title='alsa::poll::PollFd'>PollFd</a>&gt;&gt;</code></h3><div class='docblock'><p>Wrapper around count and fill - returns an array of PollFds</p>
+        <h3 id='method.get' class='method stab '><code>fn <a href='#method.get' class='fnname'>get</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;pollfd&gt;&gt;</code></h3><div class='docblock'><p>Wrapper around count and fill - returns an array of pollfds</p>
 </div></div>
         <h2 id='implementors'>Implementors</h2>
         <ul class='item-list' id='implementors-list'>
-    <li><code>impl <a class='trait' href='../../alsa/poll/trait.PollDescriptors.html' title='alsa::poll::PollDescriptors'>PollDescriptors</a> for <a class='struct' href='../../alsa/hctl/struct.HCtl.html' title='alsa::hctl::HCtl'>HCtl</a></code></li>
-<li><code>impl <a class='trait' href='../../alsa/poll/trait.PollDescriptors.html' title='alsa::poll::PollDescriptors'>PollDescriptors</a> for <a class='struct' href='../../alsa/pcm/struct.PCM.html' title='alsa::pcm::PCM'>PCM</a></code></li>
-<li><code>impl <a class='trait' href='../../alsa/poll/trait.PollDescriptors.html' title='alsa::poll::PollDescriptors'>PollDescriptors</a> for <a class='struct' href='../../alsa/rawmidi/struct.Rawmidi.html' title='alsa::rawmidi::Rawmidi'>Rawmidi</a></code></li>
-<li><code>impl <a class='trait' href='../../alsa/poll/trait.PollDescriptors.html' title='alsa::poll::PollDescriptors'>PollDescriptors</a> for <a class='struct' href='../../alsa/poll/struct.PollFd.html' title='alsa::poll::PollFd'>PollFd</a></code></li>
+    <li><code>impl PollDescriptors for <a class='struct' href='../../alsa/struct.Ctl.html' title='alsa::Ctl'>Ctl</a></code></li>
+<li><code>impl PollDescriptors for <a class='struct' href='../../alsa/hctl/struct.HCtl.html' title='alsa::hctl::HCtl'>HCtl</a></code></li>
+<li><code>impl PollDescriptors for <a class='struct' href='../../alsa/pcm/struct.PCM.html' title='alsa::pcm::PCM'>PCM</a></code></li>
+<li><code>impl PollDescriptors for <a class='struct' href='../../alsa/rawmidi/struct.Rawmidi.html' title='alsa::rawmidi::Rawmidi'>Rawmidi</a></code></li>
+<li><code>impl PollDescriptors for pollfd</code></li>
+<li><code>impl PollDescriptors for <a class='struct' href='../../alsa/mixer/struct.Mixer.html' title='alsa::mixer::Mixer'>Mixer</a></code></li>
 </ul><script type="text/javascript" async
-                              src="../../implementors/alsa/poll/trait.PollDescriptors.js">
-                      </script></section>
+                         src="../../implementors/alsa/poll/trait.PollDescriptors.js">
+                 </script></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -89,11 +95,13 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -109,11 +117,11 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -125,6 +133,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>

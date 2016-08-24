@@ -9,7 +9,9 @@
 
     <title>alsa::pcm::HwParams - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
+    
 
     
     
@@ -24,10 +26,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         
         <p class='location'><a href='../index.html'>alsa</a>::<wbr><a href='index.html'>pcm</a></p><script>window.sidebarCurrent = {name: 'HwParams', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -42,47 +44,57 @@
 
     <section id='main' class="content struct">
 <h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>alsa</a>::<wbr><a href='index.html'>pcm</a>::<wbr><a class='struct' href=''>HwParams</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-13163' class='srclink' href='../../src/alsa/pcm.rs.html#341' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1374' class='srclink' href='../../src/alsa/src/pcm.rs.html#443' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct HwParams&lt;'a&gt;(_, _);</pre><div class='docblock'><p><a href="http://www.alsa-project.org/alsa-doc/alsa-lib/group___p_c_m___h_w___params.html">snd_pcm_hw_params_t</a> wrapper</p>
-</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl&lt;'a&gt; <a class='struct' href='../../alsa/pcm/struct.HwParams.html' title='alsa::pcm::HwParams'>HwParams</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.any' class='method'><code>fn <a href='#method.any' class='fnname'>any</a>(a: &amp;'a <a class='struct' href='../../alsa/pcm/struct.PCM.html' title='alsa::pcm::PCM'>PCM</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='../../alsa/pcm/struct.HwParams.html' title='alsa::pcm::HwParams'>HwParams</a>&lt;'a&gt;&gt;</code></h4>
-<h4 id='method.get_rate_resample' class='method'><code>fn <a href='#method.get_rate_resample' class='fnname'>get_rate_resample</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
-<h4 id='method.set_rate_resample' class='method'><code>fn <a href='#method.set_rate_resample' class='fnname'>set_rate_resample</a>(&amp;self, resample: <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
-<h4 id='method.set_channels_near' class='method'><code>fn <a href='#method.set_channels_near' class='fnname'>set_channels_near</a>(&amp;self, v: <a href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;</code></h4>
-<h4 id='method.set_channels' class='method'><code>fn <a href='#method.set_channels' class='fnname'>set_channels</a>(&amp;self, v: <a href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
-<h4 id='method.get_channels' class='method'><code>fn <a href='#method.get_channels' class='fnname'>get_channels</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;</code></h4>
-<h4 id='method.set_rate_near' class='method'><code>fn <a href='#method.set_rate_near' class='fnname'>set_rate_near</a>(&amp;self, v: <a href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, dir: <a class='enum' href='../../alsa/enum.ValueOr.html' title='alsa::ValueOr'>ValueOr</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;</code></h4>
-<h4 id='method.set_rate' class='method'><code>fn <a href='#method.set_rate' class='fnname'>set_rate</a>(&amp;self, v: <a href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, dir: <a class='enum' href='../../alsa/enum.ValueOr.html' title='alsa::ValueOr'>ValueOr</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
-<h4 id='method.get_rate' class='method'><code>fn <a href='#method.get_rate' class='fnname'>get_rate</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;</code></h4>
-<h4 id='method.set_format' class='method'><code>fn <a href='#method.set_format' class='fnname'>set_format</a>(&amp;self, v: <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='struct' href='../../alsa/pcm/struct.HwParams.html' title='alsa::pcm::HwParams'>HwParams</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1383' class='srclink' href='../../src/alsa/src/pcm.rs.html#449-563' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.any' class='method'><code>fn <a href='#method.any' class='fnname'>any</a>(a: &amp;'a <a class='struct' href='../../alsa/pcm/struct.PCM.html' title='alsa::pcm::PCM'>PCM</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='struct' href='../../alsa/pcm/struct.HwParams.html' title='alsa::pcm::HwParams'>HwParams</a>&lt;'a&gt;&gt;</code></h4>
+<h4 id='method.get_rate_resample' class='method'><code>fn <a href='#method.get_rate_resample' class='fnname'>get_rate_resample</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
+<h4 id='method.set_rate_resample' class='method'><code>fn <a href='#method.set_rate_resample' class='fnname'>set_rate_resample</a>(&amp;self, resample: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<h4 id='method.set_channels_near' class='method'><code>fn <a href='#method.set_channels_near' class='fnname'>set_channels_near</a>(&amp;self, v: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;</code></h4>
+<h4 id='method.set_channels' class='method'><code>fn <a href='#method.set_channels' class='fnname'>set_channels</a>(&amp;self, v: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<h4 id='method.get_channels' class='method'><code>fn <a href='#method.get_channels' class='fnname'>get_channels</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;</code></h4>
+<h4 id='method.set_rate_near' class='method'><code>fn <a href='#method.set_rate_near' class='fnname'>set_rate_near</a>(&amp;self, v: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, dir: <a class='enum' href='../../alsa/enum.ValueOr.html' title='alsa::ValueOr'>ValueOr</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;</code></h4>
+<h4 id='method.set_rate' class='method'><code>fn <a href='#method.set_rate' class='fnname'>set_rate</a>(&amp;self, v: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, dir: <a class='enum' href='../../alsa/enum.ValueOr.html' title='alsa::ValueOr'>ValueOr</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<h4 id='method.get_rate' class='method'><code>fn <a href='#method.get_rate' class='fnname'>get_rate</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;</code></h4>
+<h4 id='method.set_format' class='method'><code>fn <a href='#method.set_format' class='fnname'>set_format</a>(&amp;self, v: <a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
 <h4 id='method.get_format' class='method'><code>fn <a href='#method.get_format' class='fnname'>get_format</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='enum' href='../../alsa/pcm/enum.Format.html' title='alsa::pcm::Format'>Format</a>&gt;</code></h4>
-<h4 id='method.set_access' class='method'><code>fn <a href='#method.set_access' class='fnname'>set_access</a>(&amp;self, v: <a class='enum' href='../../alsa/pcm/enum.Access.html' title='alsa::pcm::Access'>Access</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<h4 id='method.set_access' class='method'><code>fn <a href='#method.set_access' class='fnname'>set_access</a>(&amp;self, v: <a class='enum' href='../../alsa/pcm/enum.Access.html' title='alsa::pcm::Access'>Access</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
 <h4 id='method.get_access' class='method'><code>fn <a href='#method.get_access' class='fnname'>get_access</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='enum' href='../../alsa/pcm/enum.Access.html' title='alsa::pcm::Access'>Access</a>&gt;</code></h4>
 <h4 id='method.set_period_size_near' class='method'><code>fn <a href='#method.set_period_size_near' class='fnname'>set_period_size_near</a>(&amp;self, v: <a class='type' href='../../alsa/pcm/type.Frames.html' title='alsa::pcm::Frames'>Frames</a>, dir: <a class='enum' href='../../alsa/enum.ValueOr.html' title='alsa::ValueOr'>ValueOr</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='type' href='../../alsa/pcm/type.Frames.html' title='alsa::pcm::Frames'>Frames</a>&gt;</code></h4>
-<h4 id='method.set_period_size' class='method'><code>fn <a href='#method.set_period_size' class='fnname'>set_period_size</a>(&amp;self, v: <a class='type' href='../../alsa/pcm/type.Frames.html' title='alsa::pcm::Frames'>Frames</a>, dir: <a class='enum' href='../../alsa/enum.ValueOr.html' title='alsa::ValueOr'>ValueOr</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<h4 id='method.set_period_size' class='method'><code>fn <a href='#method.set_period_size' class='fnname'>set_period_size</a>(&amp;self, v: <a class='type' href='../../alsa/pcm/type.Frames.html' title='alsa::pcm::Frames'>Frames</a>, dir: <a class='enum' href='../../alsa/enum.ValueOr.html' title='alsa::ValueOr'>ValueOr</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
 <h4 id='method.get_period_size' class='method'><code>fn <a href='#method.get_period_size' class='fnname'>get_period_size</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='type' href='../../alsa/pcm/type.Frames.html' title='alsa::pcm::Frames'>Frames</a>&gt;</code></h4>
-<h4 id='method.set_periods' class='method'><code>fn <a href='#method.set_periods' class='fnname'>set_periods</a>(&amp;self, v: <a href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, dir: <a class='enum' href='../../alsa/enum.ValueOr.html' title='alsa::ValueOr'>ValueOr</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
-<h4 id='method.get_periods' class='method'><code>fn <a href='#method.get_periods' class='fnname'>get_periods</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;</code></h4>
+<h4 id='method.set_periods' class='method'><code>fn <a href='#method.set_periods' class='fnname'>set_periods</a>(&amp;self, v: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, dir: <a class='enum' href='../../alsa/enum.ValueOr.html' title='alsa::ValueOr'>ValueOr</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<h4 id='method.get_periods' class='method'><code>fn <a href='#method.get_periods' class='fnname'>get_periods</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>&gt;</code></h4>
 <h4 id='method.set_buffer_size_near' class='method'><code>fn <a href='#method.set_buffer_size_near' class='fnname'>set_buffer_size_near</a>(&amp;self, v: <a class='type' href='../../alsa/pcm/type.Frames.html' title='alsa::pcm::Frames'>Frames</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='type' href='../../alsa/pcm/type.Frames.html' title='alsa::pcm::Frames'>Frames</a>&gt;</code></h4>
-<h4 id='method.set_buffer_size' class='method'><code>fn <a href='#method.set_buffer_size' class='fnname'>set_buffer_size</a>(&amp;self, v: <a class='type' href='../../alsa/pcm/type.Frames.html' title='alsa::pcm::Frames'>Frames</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<h4 id='method.set_buffer_size' class='method'><code>fn <a href='#method.set_buffer_size' class='fnname'>set_buffer_size</a>(&amp;self, v: <a class='type' href='../../alsa/pcm/type.Frames.html' title='alsa::pcm::Frames'>Frames</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
 <h4 id='method.get_buffer_size' class='method'><code>fn <a href='#method.get_buffer_size' class='fnname'>get_buffer_size</a>(&amp;self) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='type' href='../../alsa/pcm/type.Frames.html' title='alsa::pcm::Frames'>Frames</a>&gt;</code></h4>
-<h4 id='method.dump' class='method'><code>fn <a href='#method.dump' class='fnname'>dump</a>(&amp;self, o: &amp;mut <a class='struct' href='../../alsa/struct.Output.html' title='alsa::Output'>Output</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
+<h4 id='method.dump' class='method'><code>fn <a href='#method.dump' class='fnname'>dump</a>(&amp;self, o: &amp;mut <a class='struct' href='../../alsa/struct.Output.html' title='alsa::Output'>Output</a>) -&gt; <a class='type' href='../../alsa/type.Result.html' title='alsa::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code></h4>
 <h4 id='method.copy_from' class='method'><code>fn <a href='#method.copy_from' class='fnname'>copy_from</a>(&amp;mut self, other: &amp;<a class='struct' href='../../alsa/pcm/struct.HwParams.html' title='alsa::pcm::HwParams'>HwParams</a>&lt;'a&gt;)</code></h4>
-</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../alsa/pcm/struct.HwParams.html' title='alsa::pcm::HwParams'>HwParams</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.drop' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#method.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
-</div><h3 class='impl'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../alsa/pcm/struct.HwParams.html' title='alsa::pcm::HwParams'>HwParams</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../../alsa/pcm/struct.HwParams.html' title='alsa::pcm::HwParams'>HwParams</a>&lt;'a&gt;</code></h4>
-<h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
-</div><h3 class='impl'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../alsa/pcm/struct.HwParams.html' title='alsa::pcm::HwParams'>HwParams</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
-</div></section>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../alsa/pcm/struct.HwParams.html' title='alsa::pcm::HwParams'>HwParams</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1379' class='srclink' href='../../src/alsa/src/pcm.rs.html#445-447' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.drop' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
+<div class='docblock'><p>A method called when the value goes out of scope. <a href="https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../alsa/pcm/struct.HwParams.html' title='alsa::pcm::HwParams'>HwParams</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1518' class='srclink' href='../../src/alsa/src/pcm.rs.html#565-571' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../../alsa/pcm/struct.HwParams.html' title='alsa::pcm::HwParams'>HwParams</a>&lt;'a&gt;</code></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../alsa/pcm/struct.HwParams.html' title='alsa::pcm::HwParams'>HwParams</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1523' class='srclink' href='../../src/alsa/src/pcm.rs.html#573-579' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -95,11 +107,13 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -115,11 +129,11 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
@@ -131,6 +145,6 @@
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script defer src="../../search-index.js"></script>
 </body>
 </html>
